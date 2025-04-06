@@ -1,19 +1,19 @@
 async-logger
 
-Objective: Develop a basic logging library that can be used by applications to log messages. The library should handle message logging efficiently and reliably, offering basic configuration options.
-Key Requirements:
-Driver Application should be able to Initialize the Library and log messages to the desired sink.
+A basic logging library that can be used by applications to log messages. The library can handle message logging efficiently and reliably, offering basic configuration options.
+Key Features:
+Initialize the Library and log messages to the desired sink.
 Logger has the following capabilities-
 Accepts messages from client(s)
-A logger would have one or more sinks associated with it. 
+A logger can have one or more sinks associated with it. 
 Supports defined message levels.
-enriches message with current timestamp while directing message to a sink
+Enriches message with current timestamp while directing message to a sink
 Logger is initialized with a configuration eg:logger name, sink(s), buffer size, etc.
-Logger should support both sync and async logging. 
+Logger support both sync and async logging. 
 For Async logger buffer size would determine the maximum inflight messages.
-Messages must be ordered. Messages should reach the sink in the order they were sent.
-Should support writes from multiple-threads.
-There shouldn’t be any data loss.
+Messages are ordered. Messages reach the sink in the order of they were sent.
+Support writes from multiple-threads.
+Not any data loss.
 
 Sink:
 There can be various types of sink (file, stdout, database).  
